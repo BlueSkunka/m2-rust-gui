@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Welcome to Tauri</h1>
+
+      <div class="row">
+        <a href="https://tauri.app" target="_blank">
+          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
+        </a>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+        >
+          <img
+            src="/assets/javascript.svg"
+            class="logo vanilla"
+            alt="JavaScript logo"
+          />
+        </a>
+      </div>
+      <p>Click on the Tauri logo to learn more about the framework</p>
+
+      <form class="row" id="greet-form">
+        <input id="greet-input" placeholder="Enter a name..." />
+        <button type="submit">Greet</button>
+      </form>
+      <p id="greet-msg"></p>
+      <form class="row" id="pokemon-form">
+        <input id="pokemon-name" placeholder="Enter a name">
+        <select id="pokemon-type">
+          <option selected value="fire">fire</option>
+          <option value="water">water</option>
+          <option value="leaf">leaf</option>
+          <option value="ground">ground</option>
+          <option value="ice">ice</option>
+        </select>
+        <select id="pokemon-gender">
+          <option selected value="female">female</option>
+          <option value="male">male</option>
+        </select>
+        <button type="submit">Ajouter à l'élevage</button>
+      </form>
+
+      <div class="row">
+        <button id="elevage-train" type="button">Training</button>
+        <button id="elevage-sort-level" type="button">Trier par niveau</button>
+        <button id="elevage-reproduce" type="button">Reproduction</button>
+      </div>
+
+      <table id="elevage">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Type</th>
+            <th>Experience</th>
+            <th>Gender</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="elevage-body">
+
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
